@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- 고양이 몸통 -->
+  <ellipse cx="100" cy="120" rx="45" ry="55" fill="#ff9f43" stroke="#333" stroke-width="2"/>
+
+  <!-- 고양이 머리 -->
+  <circle cx="100" cy="70" r="35" fill="#ff9f43" stroke="#333" stroke-width="2"/>
+
+  <!-- 왼쪽 귀 -->
+  <path d="M 75 45 L 65 20 L 85 50 Z" fill="#ff9f43" stroke="#333" stroke-width="2"/>
+  <path d="M 75 45 L 70 30 L 80 48 Z" fill="#ffb366"/>
+
+  <!-- 오른쪽 귀 -->
+  <path d="M 125 45 L 135 20 L 115 50 Z" fill="#ff9f43" stroke="#333" stroke-width="2"/>
+  <path d="M 125 45 L 130 30 L 120 48 Z" fill="#ffb366"/>
+
+  <!-- 왼쪽 눈 -->
+  <circle cx="88" cy="65" r="5" fill="#333"/>
+  <circle cx="90" cy="63" r="2" fill="#fff"/>
+
+  <!-- 오른쪽 눈 -->
+  <circle cx="112" cy="65" r="5" fill="#333"/>
+  <circle cx="114" cy="63" r="2" fill="#fff"/>
+
+  <!-- 코 -->
+  <path d="M 100 75 L 97 80 L 103 80 Z" fill="#ff6b6b"/>
+
+  <!-- 입 -->
+  <path d="M 100 80 Q 95 85 90 83" stroke="#333" stroke-width="1.5" fill="none"/>
+  <path d="M 100 80 Q 105 85 110 83" stroke="#333" stroke-width="1.5" fill="none"/>
+
+  <!-- 수염 왼쪽 -->
+  <line x1="60" y1="70" x2="80" y2="68" stroke="#333" stroke-width="1"/>
+  <line x1="60" y1="75" x2="80" y2="75" stroke="#333" stroke-width="1"/>
+  <line x1="60" y1="80" x2="80" y2="82" stroke="#333" stroke-width="1"/>
+
+  <!-- 수염 오른쪽 -->
+  <line x1="140" y1="70" x2="120" y2="68" stroke="#333" stroke-width="1"/>
+  <line x1="140" y1="75" x2="120" y2="75" stroke="#333" stroke-width="1"/>
+  <line x1="140" y1="80" x2="120" y2="82" stroke="#333" stroke-width="1"/>
+
+  <!-- 왼쪽 앞발 -->
+  <ellipse cx="80" cy="165" rx="10" ry="18" fill="#ff9f43" stroke="#333" stroke-width="2"/>
+
+  <!-- 오른쪽 앞발 -->
+  <ellipse cx="120" cy="165" rx="10" ry="18" fill="#ff9f43" stroke="#333" stroke-width="2"/>
+
+  <!-- 꼬리 -->
+  <path d="M 140 130 Q 170 120 175 95 Q 178 80 170 75"
+        stroke="#ff9f43" stroke-width="15" fill="none"
+        stroke-linecap="round"/>
+  <path d="M 140 130 Q 170 120 175 95 Q 178 80 170 75"
+        stroke="#333" stroke-width="2" fill="none"
+        stroke-linecap="round"/>
+
+  <!-- 배 -->
+  <ellipse cx="100" cy="130" rx="30" ry="35" fill="#ffe0b3" opacity="0.7"/>
+</svg>

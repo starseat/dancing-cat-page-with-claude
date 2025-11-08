@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- 고양이 몸통 (더 통통하게) -->
+  <ellipse cx="100" cy="130" rx="50" ry="45" fill="#FFB366" stroke="#333" stroke-width="2"/>
+
+  <!-- 배 부분 (더 크고 귀엽게) -->
+  <ellipse cx="100" cy="135" rx="35" ry="30" fill="#FFF5E6"/>
+
+  <!-- 고양이 머리 (더 크고 둥글게) -->
+  <circle cx="100" cy="75" r="40" fill="#FFB366" stroke="#333" stroke-width="2"/>
+
+  <!-- 왼쪽 귀 (더 동그랗게) -->
+  <ellipse cx="75" cy="45" rx="15" ry="20" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <ellipse cx="75" cy="48" rx="8" ry="10" fill="#FFD9B3"/>
+
+  <!-- 오른쪽 귀 (더 동그랗게) -->
+  <ellipse cx="125" cy="45" rx="15" ry="20" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <ellipse cx="125" cy="48" rx="8" ry="10" fill="#FFD9B3"/>
+
+  <!-- 왼쪽 눈 (크고 반짝이는 눈) -->
+  <ellipse cx="85" cy="70" rx="8" ry="12" fill="#333"/>
+  <ellipse cx="83" cy="67" rx="3" ry="4" fill="#fff"/>
+  <ellipse cx="87" cy="73" rx="1.5" ry="2" fill="#fff" opacity="0.8"/>
+
+  <!-- 오른쪽 눈 (크고 반짝이는 눈) -->
+  <ellipse cx="115" cy="70" rx="8" ry="12" fill="#333"/>
+  <ellipse cx="113" cy="67" rx="3" ry="4" fill="#fff"/>
+  <ellipse cx="117" cy="73" rx="1.5" ry="2" fill="#fff" opacity="0.8"/>
+
+  <!-- 코 (하트 모양으로 더 귀엽게) -->
+  <path d="M 100 83 Q 97 80 94 80 Q 91 80 91 83 Q 91 85 94 87 L 100 90 L 106 87 Q 109 85 109 83 Q 109 80 106 80 Q 103 80 100 83 Z" fill="#FF9999"/>
+
+  <!-- 입 (귀여운 w 모양) -->
+  <path d="M 100 90 Q 95 93 92 91" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 100 90 Q 105 93 108 91" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- 볼 홍조 (왼쪽) -->
+  <ellipse cx="70" cy="80" rx="8" ry="6" fill="#FFB3BA" opacity="0.4"/>
+
+  <!-- 볼 홍조 (오른쪽) -->
+  <ellipse cx="130" cy="80" rx="8" ry="6" fill="#FFB3BA" opacity="0.4"/>
+
+  <!-- 수염 왼쪽 -->
+  <line x1="50" y1="75" x2="70" y2="73" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="82" x2="70" y2="80" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="52" y1="89" x2="70" y2="87" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- 수염 오른쪽 -->
+  <line x1="150" y1="75" x2="130" y2="73" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="150" y1="82" x2="130" y2="80" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="148" y1="89" x2="130" y2="87" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- 왼쪽 앞발 -->
+  <ellipse cx="80" cy="165" rx="12" ry="20" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <ellipse cx="80" cy="178" rx="10" ry="6" fill="#FFD9B3"/>
+
+  <!-- 오른쪽 앞발 -->
+  <ellipse cx="120" cy="165" rx="12" ry="20" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <ellipse cx="120" cy="178" rx="10" ry="6" fill="#FFD9B3"/>
+
+  <!-- 왼쪽 뒷발 (살짝 보이게) -->
+  <ellipse cx="70" cy="160" rx="10" ry="12" fill="#FF9F43" stroke="#333" stroke-width="1.5"/>
+
+  <!-- 오른쪽 뒷발 (살짝 보이게) -->
+  <ellipse cx="130" cy="160" rx="10" ry="12" fill="#FF9F43" stroke="#333" stroke-width="1.5"/>
+
+  <!-- 꼬리 (더 부드럽고 귀엽게) -->
+  <path d="M 145 135 Q 165 125 175 110 Q 182 95 178 85 Q 176 78 172 75"
+        stroke="#FFB366" stroke-width="18" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 145 135 Q 165 125 175 110 Q 182 95 178 85 Q 176 78 172 75"
+        stroke="#333" stroke-width="2" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 꼬리 끝 하이라이트 -->
+  <circle cx="172" cy="75" r="8" fill="#FFD9B3"/>
+  <circle cx="172" cy="75" r="8" fill="none" stroke="#333" stroke-width="2"/>
+</svg>

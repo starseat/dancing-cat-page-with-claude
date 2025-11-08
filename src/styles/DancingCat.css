@@ -1,0 +1,260 @@
+.dancing-cat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cat-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-image {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  will-change: transform;
+}
+
+/* 댄싱 애니메이션 */
+.cat-wrapper.dancing .cat-image {
+  animation:
+    dance 2s ease-in-out infinite,
+    rotate 4s linear infinite,
+    bounce 1s ease-in-out infinite,
+    sway 1.5s ease-in-out infinite;
+}
+
+/* 춤 동작: 좌우 이동 + 크기 변화 */
+@keyframes dance {
+  0%, 100% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-20px) scale(1.1);
+  }
+  75% {
+    transform: translateX(20px) scale(0.95);
+  }
+}
+
+/* 회전 동작 */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 점프 동작 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+/* 좌우 흔들기 */
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(-5deg);
+  }
+  66% {
+    transform: rotate(5deg);
+  }
+}
+
+/* 제어 버튼 */
+.control-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  min-width: 200px;
+  margin-top: 1rem;
+}
+
+/* 안내 텍스트 */
+.instruction {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* 애니메이션 정지 시 부드러운 전환 */
+.cat-wrapper:not(.dancing) .cat-image {
+  transition: transform 0.5s ease-out;
+}
+
+/* 호버 효과 */
+.cat-wrapper:hover .cat-image {
+  filter: drop-shadow(0 15px 30px rgba(255, 159, 67, 0.5));
+}
+
+/* 성능 최적화를 위한 GPU 가속 */
+.cat-wrapper.dancing {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* 반응형 디자인 - 태블릿 */
+@media (max-width: 768px) {
+  .dancing-cat-container {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .cat-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .control-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.8rem;
+    min-width: 180px;
+  }
+
+  .instruction {
+    font-size: 1.1rem;
+  }
+
+  /* 태블릿에서 점프 높이 조정 */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+  }
+}
+
+/* 반응형 디자인 - 모바일 */
+@media (max-width: 480px) {
+  .dancing-cat-container {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cat-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .control-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    min-width: 160px;
+  }
+
+  .instruction {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* 모바일에서 점프 높이 조정 */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* 모바일에서 좌우 이동 범위 축소 */
+  @keyframes dance {
+    0%, 100% {
+      transform: translateX(0) scale(1);
+    }
+    25% {
+      transform: translateX(-15px) scale(1.1);
+    }
+    75% {
+      transform: translateX(15px) scale(0.95);
+    }
+  }
+}
+
+/* 큰 화면 - 데스크탑 */
+@media (min-width: 1024px) {
+  .cat-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .control-button {
+    font-size: 1.3rem;
+    padding: 1.1rem 2.2rem;
+    min-width: 220px;
+  }
+
+  .instruction {
+    font-size: 1.3rem;
+  }
+}
+
+/* 터치 디바이스 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  .control-button {
+    min-height: 48px;
+    touch-action: manipulation;
+  }
+
+  /* 터치 디바이스에서 호버 효과 제거 */
+  .cat-wrapper:hover .cat-image {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  }
+}
+
+/* 접근성: 애니메이션 감소 선호 사용자 */
+@media (prefers-reduced-motion: reduce) {
+  .cat-wrapper.dancing .cat-image {
+    animation: none;
+  }
+
+  .instruction {
+    animation: none;
+    opacity: 1;
+  }
+
+  .cat-wrapper:not(.dancing) .cat-image {
+    transition: none;
+  }
+
+  button {
+    transition: none;
+  }
+}
